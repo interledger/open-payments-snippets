@@ -1,0 +1,45 @@
+{
+    "name": "@interledger/open-payments-snippets",
+    "version": "0.1.0",
+    "description": "Open Payments SDK snippets",
+    "scripts": {
+        "grant:continuation": "tsx grant/grant-continuation.ts",
+        "grant:ip": "tsx grant/grant-incoming-payment.ts",
+        "grant:op": "tsx grant/grant-outgoing-payment.ts",
+        "grant:quote": "tsx grant/grant-quote.ts",
+        "ip:create": "tsx incoming-payment/incoming-payment-create.ts",
+        "ip:complete": "tsx incoming-payment/incoming-payment-complete.ts",
+        "ip:get": "tsx incoming-payment/incoming-payment-get.ts",
+        "ip:list": "tsx incoming-payment/incoming-payment-list.ts",
+        "quote:create": "tsx quote/quote-create.ts",
+        "quote:get": "tsx quote/quote-get.ts",
+        "op:create": "tsx outgoing-payment/outgoing-payment-create.ts",
+        "op:get": "tsx outgoing-payment/outgoing-payment-get.ts",
+        "op:list": "tsx outgoing-payment/outgoing-payment-list.ts",
+        "token:revoke": "tsx token/token-revoke.ts",
+        "token:rotate": "tsx token/token-rotate.ts",
+        "pp:get": "tsx payment-pointer/payment-pointer-get.ts",
+        "pp:get-keys": "tsx payment-pointer/payment-pointer-get-keys.ts"
+    },
+    "author": "Interledger",
+    "keywords": [
+        "open payments",
+        "interledger",
+        "code snippets",
+        "ilp",
+        "sdk"
+    ],
+    "devDependencies": {
+        "@types/inquirer": "^9.0.3",
+        "@types/node": "^20.6.3",
+        "dotenv": "^16.3.1",
+        "prettier": "^3.0.3",
+        "typescript": "^5.2.2"
+    },
+    "dependencies": {
+        "@interledger/http-signature-utils": "^1.1.0",
+        "@interledger/open-payments": "^3.2.0",
+        "inquirer": "^9.2.11",
+        "tsx": "^3.12.10"
+    }
+}
