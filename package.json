@@ -3,6 +3,7 @@
     "version": "0.1.0",
     "description": "Open Payments SDK snippets",
     "scripts": {
+        "grant": "tsx grant/grant.ts",
         "grant:continuation": "tsx grant/grant-continuation.ts",
         "grant:ip": "tsx grant/grant-incoming-payment.ts",
         "grant:op": "tsx grant/grant-outgoing-payment.ts",
@@ -30,16 +31,13 @@
         "sdk"
     ],
     "devDependencies": {
-        "@types/inquirer": "^9.0.3",
         "@types/node": "^20.6.3",
         "dotenv": "^16.3.1",
         "prettier": "^3.0.3",
         "typescript": "^5.2.2"
     },
-    "dependencies": {
-        "@interledger/http-signature-utils": "^1.1.0",
+    "dependencies": { 
         "@interledger/open-payments": "^3.2.0",
-        "inquirer": "^9.2.11",
         "tsx": "^3.12.10"
     }
 }

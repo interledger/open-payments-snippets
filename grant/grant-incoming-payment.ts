@@ -40,6 +40,7 @@ async function run() {
     }
 
     console.log("INCOMING_PAYMENT_ACCESS_TOKEN =", grant.access_token.value);
+    console.log("MANAGE_URL = ", grant.access_token.manage);
 }
 
 run();

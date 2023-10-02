@@ -50,8 +50,6 @@ async function run() {
                                 assetCode: "USD",
                                 assetScale: 2,
                             },
-                            // https://en.wikipedia.org/wiki/ISO_8601#Repeating_intervals
-                            // interval: "R-1/P1Y2M10DT2H30M/2022-05-11T15:30:00Z",
                         },
                     },
                 ],
@@ -67,11 +65,13 @@ async function run() {
         },
     );
 
-    if (isPendingGrant(grant)) {
-        throw new Error("Expected non-interactive grant");
+    if (!isPendingGrant(grant)) {
+        throw new Error("Expected interactive grant");
     }
 
-    console.log("CONTINUE_ACCESS_TOKEN =", grant.continue.access_token);
+    console.log("Please interact at the following URL:", grant.interact.redirect);
+    console.log("\n");
+    console.log("CONTINUE_ACCESS_TOKEN =", grant.continue.access_token.value);
     console.log("CONTINUE_URI =", grant.continue.uri);
 }
 

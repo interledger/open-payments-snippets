@@ -1,3 +1,6 @@
 node_modules
 .env
 private.key
+pnpm-lock.yaml
+package-lock.json
+yarn.lock

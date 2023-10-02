@@ -40,6 +40,7 @@ async function run() {
     }
 
     console.log("QUOTE_ACCESS_TOKEN =", grant.access_token.value);
+    console.log("MANAGE_URL = ", grant.access_token.manage);
 }
 
 run();

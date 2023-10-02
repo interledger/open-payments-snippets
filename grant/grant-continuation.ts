@@ -35,6 +35,9 @@ async function run() {
         },
     );
 
+    console.log(
+        "\x1b[34mNote: \x1b[0mIf you requested a grant with the `pnpm grant` script, the following `OUTGOING_PAYMENT_ACCESS_TOKEN`can be used as `INCOMING_PAYMENT_ACCESS_TOKEN` and `QUOTE_ACCESS_TOKEN`.\n",
+    );
     console.log("OUTGOING_PAYMENT_ACCESS_TOKEN =", grant.access_token.value);
     console.log("MANAGE_URL =", grant.access_token.manage);
 }
