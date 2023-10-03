@@ -1,15 +1,15 @@
 # Open Payments Node SDK Snippets
 
-These code snippets are intended for use with [Rafiki Money](https://rafiki.money/). While everyone
-is welcome to use these code snippets as a reference, please note that they may need to be adapted
-to suit your particular application.
+These code snippets are intended for use with <a href="https://rafiki.money" target="_blank">Rafiki
+Money</a>. While everyone is welcome to use these code snippets as a reference, please note that
+they may need to be adapted to suit your particular application.
 
 ---
 
 ### Prerequisites
 
 -   A preferred package manager (`npm`, `pnpm`, `yarn`)
--   An active account on [Rafiki Money](https://rafiki.money/)
+-   An active account on <a href="https://rafiki.money" target="_blank">Rafiki Money</a>
 -   A payment pointer associated with your account
 -   Payment pointer keys should be generated (refer to
     [loading the private key](#loading-the-private-key))
@@ -32,9 +32,9 @@ yarn
 ### Loading the private key
 
 When generating the keys for a payment pointer on
-[Rafiki Money Developer Keys section](https://rafiki.money/settings/developer-keys), the private key
-will be automatically downloaded to your machine. Please relocate the `private.key` file to the root
-directory of this repository.
+<a href="https://rafiki.money/settings/developer-keys" target="_blank">Rafiki Money Developer Keys
+section</a>, the private key will be automatically downloaded to your machine. Please relocate the
+`private.key` file to the root directory of this repository.
 
 Ensure you are at the repository root and execute the following command in your terminal:
 
