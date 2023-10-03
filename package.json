@@ -18,7 +18,13 @@
         "op:get": "tsx outgoing-payment/outgoing-payment-get.ts",
         "op:list": "tsx outgoing-payment/outgoing-payment-list.ts",
         "token:revoke": "tsx token/token-revoke.ts",
+        "token:revoke:ip": "tsx token/token-revoke.ts --token ip",
+        "token:revoke:op": "tsx token/token-revoke.ts --token op",
+        "token:revoke:quote": "tsx token/token-revoke.ts --token quote",
         "token:rotate": "tsx token/token-rotate.ts",
+        "token:rotate:ip": "tsx token/token-rotate.ts --token ip",
+        "token:rotate:op": "tsx token/token-rotate.ts --token op",
+        "token:rotate:quote": "tsx token/token-rotate.ts --token quote",
         "pp:get": "tsx payment-pointer/payment-pointer-get.ts",
         "pp:get-keys": "tsx payment-pointer/payment-pointer-get-keys.ts"
     },

@@ -1,14 +1,10 @@
-import dotenv from "dotenv";
-import { join } from "path";
 import { createAuthenticatedClient } from "@interledger/open-payments";
 import { loadPrivateKey } from "utils/load-private-key";
-
-dotenv.config({ path: join(__dirname, "..", ".env") });
+import { parseTokenArgs } from "utils/parse-token-args";
 
 const KEY_ID = process.env.KEY_ID;
 const PAYMENT_POINTER = process.env.PAYMENT_POINTER;
-const MANAGE_URL = process.env.MANAGE_URL;
-const ACCESS_TOKEN = process.env.ACCESS_TOKEN;
+const { ACCESS_TOKEN, MANAGE_URL } = parseTokenArgs(process.argv.slice(2));
 
 async function run() {
     const client = await createAuthenticatedClient({

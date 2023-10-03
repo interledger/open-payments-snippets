@@ -74,7 +74,13 @@ manager:
 | pp:get             | Retrieve payment pointer's information         |
 | pp:get-keys        | Retrieve payment pointer's JWKs                |
 | token:revoke       | Revoke a token                                 |
+| token:revoke:ip    | Revoke incoming payment token                  |
+| token:revoke:op    | Revoke outgoing payment token                  |
+| token:revoke:quote | Revoke quote token                             |
 | token:rotate       | Rotate a token                                 |
+| token:rotate:ip    | Rotate incoming payment token                  |
+| token:rotate:op    | Rotate outgoing payment token                  |
+| token:rotate:quote | Rotate quote token                             |
 
 Example:
 
