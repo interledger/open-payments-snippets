@@ -1,3 +1,4 @@
+// Import dependencies
 import dotenv from "dotenv";
 import { join } from "path";
 import { createAuthenticatedClient, isPendingGrant } from "@interledger/open-payments";
@@ -9,16 +10,19 @@ const KEY_ID = process.env.KEY_ID;
 const PAYMENT_POINTER = process.env.PAYMENT_POINTER;
 
 async function run() {
+    // Initialize Open Payments client
     const client = await createAuthenticatedClient({
         paymentPointerUrl: PAYMENT_POINTER,
         privateKey: loadPrivateKey(),
         keyId: KEY_ID,
     });
 
+    // Get payment pointer information
     const paymentPointer = await client.paymentPointer.get({
         url: PAYMENT_POINTER,
     });
 
+    // Request incoming payment grant
     const grant = await client.grant.request(
         {
             url: paymentPointer.authServer,
