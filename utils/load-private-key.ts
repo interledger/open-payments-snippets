@@ -1,8 +1,9 @@
 import { type KeyObject, createPrivateKey } from "crypto";
 import { readFileSync } from "fs";
 import { join } from "path";
+import { fileURLToPath } from "url";
 
-const PRIVATE_KEY_PATH = join(__dirname, "..", "private.key");
+const PRIVATE_KEY_PATH = fileURLToPath(join(import.meta.url, "..", "..", "private.key"));
 
 function checkKey(key: KeyObject): boolean {
     const jwk = key.export({ format: "jwk" });

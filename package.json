@@ -2,6 +2,7 @@
     "name": "@interledger/open-payments-snippets",
     "version": "0.1.0",
     "description": "Open Payments SDK snippets",
+    "type": "module",
     "scripts": {
         "grant": "tsx grant/grant.ts",
         "grant:continuation": "tsx grant/grant-continuation.ts",
