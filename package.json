@@ -4,6 +4,7 @@
     "description": "Open Payments SDK snippets",
     "type": "module",
     "scripts": {
+        "format": "prettier . --write --cache --cache-location='node_modules/.cache/prettiercache' --log-level=warn",
         "grant": "tsx grant/grant.ts",
         "grant:continuation": "tsx grant/grant-continuation.ts",
         "grant:ip": "tsx grant/grant-incoming-payment.ts",
@@ -43,7 +44,7 @@
         "prettier": "^3.0.3",
         "typescript": "^5.2.2"
     },
-    "dependencies": { 
+    "dependencies": {
         "@interledger/open-payments": "^3.2.0",
         "tsx": "^3.12.10"
     }

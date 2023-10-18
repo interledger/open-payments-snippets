@@ -2,7 +2,9 @@ import dotenv from "dotenv";
 import { join } from "path";
 import { fileURLToPath } from "url";
 
-dotenv.config({ path: fileURLToPath(join(import.meta.url, "..", "..", ".env")) });
+dotenv.config({
+    path: fileURLToPath(join(import.meta.url, "..", "..", ".env")),
+});
 
 enum Flag {
     TOKEN = "--token",

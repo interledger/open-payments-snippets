@@ -4,10 +4,7 @@ import { fileURLToPath } from "url";
 import { loadPrivateKey } from "utils/load-private-key";
 
 //@! start chunk 1 | title=Import dependencies
-import {
-    createAuthenticatedClient,
-    isPendingGrant,
-} from "@interledger/open-payments";
+import { createAuthenticatedClient, isPendingGrant } from "@interledger/open-payments";
 //@! end chunk 1
 
 dotenv.config({
@@ -45,7 +42,7 @@ const grant = await client.grant.request(
                 },
             ],
         },
-    }
+    },
 );
 //@! end chunk 4
 

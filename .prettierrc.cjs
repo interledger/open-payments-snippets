@@ -1,9 +1,9 @@
 /** @type { import("prettier").Config }*/
-export const config = {
+const config = {
     arrowParens: "always",
     bracketSameLine: false,
     bracketSpacing: true,
-    printWidth: 100,
+    printWidth: 120,
     proseWrap: "always",
     semi: true,
     singleQuote: false,
@@ -11,3 +11,5 @@ export const config = {
     trailingComma: "all",
     useTabs: false,
 };
+
+module.exports = config;

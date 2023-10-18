@@ -1,8 +1,8 @@
 # Open Payments Node SDK Snippets
 
-These code snippets are intended for use with <a href="https://rafiki.money" target="_blank">Rafiki
-Money</a>. While everyone is welcome to use these code snippets as a reference, please note that
-they may need to be adapted to suit your particular application.
+These code snippets are intended for use with <a href="https://rafiki.money" target="_blank">Rafiki Money</a>. While
+everyone is welcome to use these code snippets as a reference, please note that they may need to be adapted to suit your
+particular application.
 
 ---
 
@@ -11,8 +11,7 @@ they may need to be adapted to suit your particular application.
 -   A preferred package manager (`npm`, `pnpm`, `yarn`)
 -   An active account on <a href="https://rafiki.money" target="_blank">Rafiki Money</a>
 -   A payment pointer associated with your account
--   Payment pointer keys should be generated (refer to
-    [loading the private key](#loading-the-private-key))
+-   Payment pointer keys should be generated (refer to [loading the private key](#loading-the-private-key))
 
 ### Setup
 
@@ -32,9 +31,9 @@ yarn
 ### Loading the private key
 
 When generating the keys for a payment pointer on
-<a href="https://rafiki.money/settings/developer-keys" target="_blank">Rafiki Money Developer Keys
-section</a>, the private key will be automatically downloaded to your machine. Please relocate the
-`private.key` file to the root directory of this repository.
+<a href="https://rafiki.money/settings/developer-keys" target="_blank">Rafiki Money Developer Keys section</a>, the
+private key will be automatically downloaded to your machine. Please relocate the `private.key` file to the root
+directory of this repository.
 
 Ensure you are at the repository root and execute the following command in your terminal:
 
@@ -47,13 +46,12 @@ Open the newly created `.env` file and fill in the following variables:
 -   `PAYMENT_POINTER`
 -   `KEY_ID`
 
-Now that you have all the necessary components to initialize the authenticated Open Payments client,
-you're ready to begin utilizing the code snippets.
+Now that you have all the necessary components to initialize the authenticated Open Payments client, you're ready to
+begin utilizing the code snippets.
 
 ### Running a snippet
 
-From the repository's root you can execute the following scripts using your preferred package
-manager:
+From the repository's root you can execute the following scripts using your preferred package manager:
 
 | Script             | Description                                    |
 | ------------------ | ---------------------------------------------- |
