@@ -25,10 +25,17 @@ const client = await createAuthenticatedClient({
 //@! end chunk 2
 
 //@! start chunk 3 | title=List outgoing payments
-const outgoingPayments = await client.outgoingPayment.list({
-    paymentPointer: PAYMENT_POINTER,
-    accessToken: OUTGOING_PAYMENT_ACCESS_TOKEN,
-});
+const outgoingPayments = await client.outgoingPayment.list(
+    {
+        paymentPointer: PAYMENT_POINTER,
+        accessToken: OUTGOING_PAYMENT_ACCESS_TOKEN,
+    },
+    {
+        first: 10,
+        last: undefined,
+        cursor: undefined,
+    },
+);
 //@! end chunk 3
 
 console.log("OUTGOING PAYMENTS:", JSON.stringify(outgoingPayments, null, 2));
