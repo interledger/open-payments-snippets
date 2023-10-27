@@ -8,7 +8,7 @@ dotenv.config({
 });
 
 const KEY_ID = process.env.KEY_ID;
-const PAYMENT_POINTER = process.env.PAYMENT_POINTER;
+const WALLET_ADDRESS = process.env.WALLET_ADDRESS;
 const PRIVATE_KEY_PATH = loadPrivateKey();
 
 //@! start chunk 1 | title=Import dependencies
@@ -17,22 +17,22 @@ import { createAuthenticatedClient, isPendingGrant } from "@interledger/open-pay
 
 //@! start chunk 2 | title=Initialize Open Payments client
 const client = await createAuthenticatedClient({
-    paymentPointerUrl: PAYMENT_POINTER,
+    walletAddressUrl: WALLET_ADDRESS,
     privateKey: PRIVATE_KEY_PATH,
     keyId: KEY_ID,
 });
 //@! end chunk 2
 
-//@! start chunk 3 | title=Get payment pointer information
-const paymentPointer = await client.paymentPointer.get({
-    url: PAYMENT_POINTER,
+//@! start chunk 3 | title=Get wallet address information
+const walletAddress = await client.walletAddress.get({
+    url: WALLET_ADDRESS,
 });
 //@! end chunk 3
 
 //@! start chunk 4 | title=Request quote grant
 const grant = await client.grant.request(
     {
-        url: paymentPointer.authServer,
+        url: walletAddress.authServer,
     },
     {
         access_token: {
@@ -47,9 +47,11 @@ const grant = await client.grant.request(
 );
 //@! end chunk 4
 
+//@! start chunk 5 | title=Check grant state
 if (isPendingGrant(grant)) {
     throw new Error("Expected non-interactive grant");
 }
+//@! end chunk 5
 
 console.log("QUOTE_ACCESS_TOKEN =", grant.access_token.value);
 console.log("QUOTE_ACCESS_TOKEN_MANAGE_URL = ", grant.access_token.manage);

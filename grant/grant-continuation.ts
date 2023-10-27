@@ -8,7 +8,7 @@ dotenv.config({
 });
 
 const KEY_ID = process.env.KEY_ID;
-const PAYMENT_POINTER = process.env.PAYMENT_POINTER;
+const WALLET_ADDRESS = process.env.WALLET_ADDRESS;
 const CONTINUE_URI = process.env.CONTINUE_URI;
 const CONTINUE_ACCESS_TOKEN = process.env.CONTINUE_ACCESS_TOKEN;
 const URL_WITH_INTERACT_REF = process.env.URL_WITH_INTERACT_REF;
@@ -20,7 +20,7 @@ import { createAuthenticatedClient } from "@interledger/open-payments";
 
 //@! start chunk 2 | title=Initialize Open Payments client
 const client = await createAuthenticatedClient({
-    paymentPointerUrl: PAYMENT_POINTER,
+    walletAddressUrl: WALLET_ADDRESS,
     privateKey: PRIVATE_KEY_PATH,
     keyId: KEY_ID,
 });

@@ -2,7 +2,7 @@ import { loadPrivateKey } from "utils/load-private-key";
 import { parseTokenArgs } from "utils/parse-token-args";
 
 const KEY_ID = process.env.KEY_ID;
-const PAYMENT_POINTER = process.env.PAYMENT_POINTER;
+const WALLET_ADDRESS = process.env.WALLET_ADDRESS;
 const { ACCESS_TOKEN, MANAGE_URL } = parseTokenArgs(process.argv.slice(2));
 const PRIVATE_KEY_PATH = loadPrivateKey();
 
@@ -12,7 +12,7 @@ import { createAuthenticatedClient } from "@interledger/open-payments";
 
 //@! start chunk 2 | title=Initialize Open Payments client
 const client = await createAuthenticatedClient({
-    paymentPointerUrl: PAYMENT_POINTER,
+    walletAddressUrl: WALLET_ADDRESS,
     privateKey: PRIVATE_KEY_PATH,
     keyId: KEY_ID,
 });

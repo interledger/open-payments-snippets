@@ -43,7 +43,7 @@ cp .env.example .env
 
 Open the newly created `.env` file and fill in the following variables:
 
--   `PAYMENT_POINTER`
+-   `WALLET_ADDRESS`
 -   `KEY_ID`
 
 Now that you have all the necessary components to initialize the authenticated Open Payments client, you're ready to
@@ -69,8 +69,8 @@ From the repository's root you can execute the following scripts using your pref
 | op:list            | List outgoing payments                         |
 | quote:create       | Create a quote                                 |
 | quote:get          | Retrieve a quote                               |
-| pp:get             | Retrieve payment pointer's information         |
-| pp:get-keys        | Retrieve payment pointer's JWKs                |
+| wa:get             | Retrieve wallet address' information           |
+| wa:get-keys        | Retrieve wallet address' JWKs                  |
 | token:revoke       | Revoke a token                                 |
 | token:revoke:ip    | Revoke incoming payment token                  |
 | token:revoke:op    | Revoke outgoing payment token                  |

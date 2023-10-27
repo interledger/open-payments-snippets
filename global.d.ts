@@ -2,7 +2,7 @@ declare namespace NodeJS {
     export interface ProcessEnv {
         PRIVATE_KEY: string;
         KEY_ID: string;
-        PAYMENT_POINTER: string;
+        WALLET_ADDRESS: string;
         INTERACT_REF: string;
         MANAGE_URL: string;
         CONTINUE_URI: string;
