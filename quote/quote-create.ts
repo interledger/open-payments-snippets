@@ -8,7 +8,7 @@ dotenv.config({
 });
 
 const KEY_ID = process.env.KEY_ID;
-const PAYMENT_POINTER = process.env.PAYMENT_POINTER;
+const WALLET_ADDRESS = process.env.WALLET_ADDRESS;
 const INCOMING_PAYMENT_URL = process.env.INCOMING_PAYMENT_URL;
 const QUOTE_ACCESS_TOKEN = process.env.QUOTE_ACCESS_TOKEN;
 const PRIVATE_KEY_PATH = loadPrivateKey();
@@ -19,7 +19,7 @@ import { createAuthenticatedClient } from "@interledger/open-payments";
 
 //@! start chunk 2 | title=Initialize Open Payments client
 const client = await createAuthenticatedClient({
-    paymentPointerUrl: PAYMENT_POINTER,
+    walletAddressUrl: WALLET_ADDRESS,
     privateKey: PRIVATE_KEY_PATH,
     keyId: KEY_ID,
 });
@@ -28,21 +28,13 @@ const client = await createAuthenticatedClient({
 //@! start chunk 3 | title=Create quote
 const quote = await client.quote.create(
     {
-        paymentPointer: PAYMENT_POINTER,
+        url: new URL(WALLET_ADDRESS).origin,
         accessToken: QUOTE_ACCESS_TOKEN,
     },
     {
+        method: "ilp",
+        walletAddress: WALLET_ADDRESS,
         receiver: INCOMING_PAYMENT_URL,
-        // receiveAmount: {
-        //     value: "1000",
-        //     assetCode: "USD",
-        //     assetScale: 2,
-        // },
-        // debitAmount: {
-        //     value: "1000",
-        //     assetCode: "USD",
-        //     assetScale: 2,
-        // },
     },
 );
 //@! end chunk 3
