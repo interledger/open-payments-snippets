@@ -1,7 +1,6 @@
 import dotenv from "dotenv";
 import { join } from "path";
 import { fileURLToPath } from "url";
-import { loadPrivateKey } from "utils/load-private-key";
 
 dotenv.config({
     path: fileURLToPath(join(import.meta.url, "..", "..", ".env")),
@@ -9,7 +8,7 @@ dotenv.config({
 
 const KEY_ID = process.env.KEY_ID;
 const WALLET_ADDRESS = process.env.WALLET_ADDRESS;
-const PRIVATE_KEY_PATH = loadPrivateKey();
+const PRIVATE_KEY_PATH = process.env.PRIVATE_KEY_PATH;
 
 //@! start chunk 1 | title=Import dependencies
 import { createAuthenticatedClient } from "@interledger/open-payments";

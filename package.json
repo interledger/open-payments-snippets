@@ -10,6 +10,7 @@
         "grant:ip": "tsx grant/grant-incoming-payment.ts",
         "grant:op": "tsx grant/grant-outgoing-payment.ts",
         "grant:quote": "tsx grant/grant-quote.ts",
+        "grant:revoke": "tsx grant/grant-revoke.ts",
         "ip:create": "tsx incoming-payment/incoming-payment-create.ts",
         "ip:complete": "tsx incoming-payment/incoming-payment-complete.ts",
         "ip:get": "tsx incoming-payment/incoming-payment-get.ts",
@@ -41,13 +42,13 @@
         "sdk"
     ],
     "devDependencies": {
-        "@types/node": "^20.8.9",
+        "@types/node": "^20.8.10",
         "dotenv": "^16.3.1",
         "prettier": "^3.0.3",
         "typescript": "^5.2.2"
     },
     "dependencies": {
-        "@interledger/open-payments": "^5.3.1",
+        "@interledger/open-payments": "^6.0.0",
         "tsx": "^3.14.0"
     }
 }

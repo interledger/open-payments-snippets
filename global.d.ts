@@ -1,6 +1,6 @@
 declare namespace NodeJS {
     export interface ProcessEnv {
-        PRIVATE_KEY: string;
+        PRIVATE_KEY_PATH: string;
         KEY_ID: string;
         WALLET_ADDRESS: string;
         INTERACT_REF: string;
