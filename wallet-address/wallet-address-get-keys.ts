@@ -28,4 +28,6 @@ const walletAddressKeys = await client.walletAddress.getKeys({
 });
 //@! end chunk 3
 
+//@! start chunk 4 | title=Output
 console.log("WALLET ADDRESS KEYS:", JSON.stringify(walletAddressKeys, null, 2));
+//@! end chunk 4

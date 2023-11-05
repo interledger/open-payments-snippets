@@ -38,4 +38,6 @@ const outgoingPayments = await client.outgoingPayment.list(
 );
 //@! end chunk 3
 
+//@! start chunk 4 | title=Output
 console.log("OUTGOING PAYMENTS:", JSON.stringify(outgoingPayments, null, 2));
+//@! end chunk 4

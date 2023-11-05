@@ -40,4 +40,6 @@ const outgoingPayment = await client.outgoingPayment.create(
 );
 //@! end chunk 3
 
+//@! start chunk 4 | title=Output
 console.log("OUTGOING_PAYMENT_URL = ", outgoingPayment.id);
+//@! end chunk 4

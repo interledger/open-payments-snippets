@@ -31,4 +31,6 @@ const quote = await client.quote.get({
 });
 //@! end chunk 3
 
+//@! start chunk 4 | title=Output
 console.log("QUOTE:", JSON.stringify(quote, null, 2));
+//@! end chunk 4

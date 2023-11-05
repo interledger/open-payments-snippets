@@ -31,4 +31,6 @@ const incomingPayment = await client.incomingPayment.get({
 });
 //@! end chunk 3
 
+//@! start chunk 4 | title=Output
 console.log("INCOMING PAYMENT:", incomingPayment);
+//@! end chunk 4

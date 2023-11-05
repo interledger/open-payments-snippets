@@ -44,4 +44,6 @@ const incomingPayment = await client.incomingPayment.create(
 );
 //@! end chunk 3
 
+//@! start chunk 4 | title=Output
 console.log("INCOMING PAYMENT URL =", incomingPayment.id);
+//@! end chunk 4

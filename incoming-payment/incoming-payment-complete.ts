@@ -31,4 +31,6 @@ const incomingPayment = await client.incomingPayment.complete({
 });
 //@! end chunk 3
 
+//@! start chunk 4 | title=Output
 console.log("INCOMING PAYMENT:", JSON.stringify(incomingPayment, null, 2));
+//@! end chunk 4

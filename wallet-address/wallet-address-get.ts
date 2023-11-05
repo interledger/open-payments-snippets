@@ -28,4 +28,6 @@ const walletAddress = await client.walletAddress.get({
 });
 //@! end chunk 3
 
+//@! start chunk 4 | title=Output
 console.log("WALLET ADDRESS:", walletAddress);
+//@! end chunk 4

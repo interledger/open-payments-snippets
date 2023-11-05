@@ -24,5 +24,7 @@ const token = await client.token.rotate({
 });
 //@! end chunk 3
 
+//@! start chunk 4 | title=Output
 console.log("ACCESS_TOKEN =", token.access_token.value);
 console.log("MANAGE_URL =", token.access_token.manage);
+//@! end chunk 4

@@ -48,5 +48,7 @@ const grant = await client.grant.continue(
 console.log(
     "\x1b[34mNote: \x1b[0mIf you requested a grant with the `pnpm grant` script, the following `OUTGOING_PAYMENT_ACCESS_TOKEN` and `OUTGOING_PAYMENT_ACCESS_TOKEN_MANAGE_URL` can be used for Incoming Payments and Quotes as well.\n",
 );
+//@! start chunk 4 | title=Output
 console.log("OUTGOING_PAYMENT_ACCESS_TOKEN =", grant.access_token.value);
 console.log("OUTGOING_PAYMENT_ACCESS_TOKEN_MANAGE_URL =", grant.access_token.manage);
+//@! end chunk 4

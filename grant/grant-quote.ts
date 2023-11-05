@@ -52,5 +52,7 @@ if (isPendingGrant(grant)) {
 }
 //@! end chunk 5
 
+//@! start chunk 6 | title=Output
 console.log("QUOTE_ACCESS_TOKEN =", grant.access_token.value);
 console.log("QUOTE_ACCESS_TOKEN_MANAGE_URL = ", grant.access_token.manage);
+//@! end chunk 6

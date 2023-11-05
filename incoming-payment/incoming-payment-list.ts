@@ -38,4 +38,6 @@ const incomingPayments = await client.incomingPayment.list(
 );
 //@! end chunk 3
 
+//@! start chunk 4 | title=Output
 console.log("INCOMING PAYMENTS:", JSON.stringify(incomingPayments, null, 2));
+//@! end chunk 4

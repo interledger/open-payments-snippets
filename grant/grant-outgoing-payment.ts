@@ -77,7 +77,8 @@ if (!isPendingGrant(grant)) {
 }
 //@! end chunk 5
 
+//@! start chunk 6 | title=Output
 console.log("Please interact at the following URL:", grant.interact.redirect);
-console.log("\n");
 console.log("CONTINUE_ACCESS_TOKEN =", grant.continue.access_token.value);
 console.log("CONTINUE_URI =", grant.continue.uri);
+//@! end chunk 6
