@@ -37,9 +37,6 @@ const incomingPayment = await client.incomingPayment.create(
             assetScale: 2,
         },
         expiresAt: new Date(Date.now() + 60_000 * 10).toISOString(),
-        metadata: {
-            description: "data",
-        },
     },
 );
 //@! end chunk 3

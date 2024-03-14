@@ -33,9 +33,6 @@ const outgoingPayment = await client.outgoingPayment.create(
     {
         walletAddress: WALLET_ADDRESS,
         quoteId: QUOTE_URL,
-        metadata: {
-            description: "data",
-        },
     },
 );
 //@! end chunk 3

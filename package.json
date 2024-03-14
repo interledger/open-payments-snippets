@@ -45,10 +45,10 @@
         "@types/node": "^20.11.17",
         "dotenv": "^16.4.1",
         "prettier": "^3.2.5",
+        "tsx": "^4.7.1",
         "typescript": "^5.3.3"
     },
     "dependencies": {
-        "@interledger/open-payments": "6.5.1",
-        "tsx": "^4.7.0"
+        "@interledger/open-payments": "6.6.0"
     }
 }
