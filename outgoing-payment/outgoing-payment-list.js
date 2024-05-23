@@ -11,19 +11,14 @@ const WALLET_ADDRESS = process.env.WALLET_ADDRESS;
 const OUTGOING_PAYMENT_ACCESS_TOKEN = process.env.OUTGOING_PAYMENT_ACCESS_TOKEN;
 const PRIVATE_KEY_PATH = process.env.PRIVATE_KEY_PATH;
 
-//@! start chunk 1 | title=Import dependencies
 import { createAuthenticatedClient } from "@interledger/open-payments";
-//@! end chunk 1
 
-//@! start chunk 2 | title=Initialize Open Payments client
 const client = await createAuthenticatedClient({
     walletAddressUrl: WALLET_ADDRESS,
     privateKey: PRIVATE_KEY_PATH,
     keyId: KEY_ID,
 });
-//@! end chunk 2
 
-//@! start chunk 3 | title=List outgoing payments
 const outgoingPayments = await client.outgoingPayment.list(
     {
         url: new URL(WALLET_ADDRESS).origin,
@@ -36,8 +31,5 @@ const outgoingPayments = await client.outgoingPayment.list(
         cursor: undefined,
     },
 );
-//@! end chunk 3
 
-//@! start chunk 4 | title=Output
 console.log("OUTGOING PAYMENTS:", JSON.stringify(outgoingPayments, null, 2));
-//@! end chunk 4
