@@ -38,7 +38,7 @@ const grant = await client.grant.request(
             access: [
                 {
                     type: "incoming-payment",
-                    actions: ["list", "list-all", "read", "read-all", "complete", "create"],
+                    actions: ["list", "read", "read-all", "complete", "create"],
                 },
             ],
         },
