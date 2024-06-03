@@ -45,7 +45,7 @@
         "@types/node": "^20.12.12",
         "dotenv": "^16.4.5",
         "prettier": "^3.2.5",
-        "tsx": "^4.10.4",
+        "tsx": "^4.11.2",
         "typescript": "^5.4.5"
     },
     "dependencies": {
