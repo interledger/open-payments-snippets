@@ -31,9 +31,6 @@ const quote = await client.quote.get({
     accessToken: QUOTE_ACCESS_TOKEN,
 });
 
-const DEBIT_AMOUNT = quote.debitAmount;
-const RECEIVE_AMOUNT = quote.receiveAmount;
-
 const grant = await client.grant.request(
     {
         url: walletAddress.authServer,
@@ -46,8 +43,11 @@ const grant = await client.grant.request(
                     type: "outgoing-payment",
                     actions: ["list", "list-all", "read", "read-all", "create"],
                     limits: {
-                        debitAmount: DEBIT_AMOUNT,
-                        receiveAmount: RECEIVE_AMOUNT,
+                        debitAmount: {
+                            assetCode: quote.debitAmount.assetCode,
+                            assetScale: quote.debitAmount.assetScale,
+                            value: quote.debitAmount.value
+                        }
                     },
                 },
             ],
