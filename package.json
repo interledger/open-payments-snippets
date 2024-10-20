@@ -49,6 +49,6 @@
         "typescript": "^5.5.4"
     },
     "dependencies": {
-        "@interledger/open-payments": "^6.13.1"
+        "@interledger/open-payments": "^6.13.2"
     }
 }
