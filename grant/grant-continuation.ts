@@ -14,7 +14,7 @@ const URL_WITH_INTERACT_REF = process.env.URL_WITH_INTERACT_REF;
 const PRIVATE_KEY_PATH = process.env.PRIVATE_KEY_PATH;
 
 //@! start chunk 1 | title=Import dependencies
-import { createAuthenticatedClient } from "@interledger/open-payments";
+import { createAuthenticatedClient, isFinalizedGrant } from "@interledger/open-payments";
 //@! end chunk 1
 
 //@! start chunk 2 | title=Initialize Open Payments client
@@ -45,10 +45,16 @@ const grant = await client.grant.continue(
 );
 //@! end chunk 3
 
+//@! start chunk 4 | title=Check grant state
+if (!isFinalizedGrant(grant)) {
+    throw new Error("Expected finalized grant. Received non-finalized grant.");
+}
+//@! end chunk4
+
 console.log(
     "\x1b[34mNote: \x1b[0mIf you requested a grant with the `pnpm grant` script, the following `OUTGOING_PAYMENT_ACCESS_TOKEN` and `OUTGOING_PAYMENT_ACCESS_TOKEN_MANAGE_URL` can be used for Incoming Payments and Quotes as well.\n",
 );
-//@! start chunk 4 | title=Output
+//@! start chunk 5 | title=Output
 console.log("OUTGOING_PAYMENT_ACCESS_TOKEN =", grant.access_token.value);
 console.log("OUTGOING_PAYMENT_ACCESS_TOKEN_MANAGE_URL =", grant.access_token.manage);
-//@! end chunk 4
+//@! end chunk 5
