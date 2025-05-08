@@ -8,10 +8,14 @@ particular application.
 
 ### Prerequisites
 
+-   Node 20 or higher
 -   A preferred package manager (`npm`, `pnpm`, `yarn`)
--   An active account on <a href="https://rafiki.money" target="_blank">Rafiki Money</a>
--   A payment pointer associated with your account
--   Payment pointer keys should be generated (refer to [loading the private key](#loading-the-private-key))
+-   [TSX](https://www.npmjs.com/package/tsx)
+-   TypeScript [Open Payments SDK](https://www.npmjs.com/package/@interledger/open-payments)
+
+### Recommendations
+
+Before working with the code snippets, create a <a href="https://wallet.interledger-test.dev/auth/signup" target="_blank">test wallet account</a> on the Interledger test network. More information about setting up and funding your test wallet account, as well as obtaining a public-private key pair and ID can be found in the <a href="https://openpayments.dev/snippets/before-you-begin" target="_blank">Open Payments documentation</a>. You'll need the private key to complete your setup.
 
 ### Setup
 
@@ -30,10 +34,9 @@ yarn
 
 ### Loading the private key
 
-When generating the keys for a payment pointer on
-<a href="https://rafiki.money/settings/developer-keys" target="_blank">Rafiki Money Developer Keys section</a>, the
-private key will be automatically downloaded to your machine. Please relocate the `private.key` file to the root
-directory of this repository.
+When you <a href="https://openpayments.dev/snippets/before-you-begin/#obtain-a-public-private-key-pair-and-key-id" target="_blank">get your public-private key pair</a>, the private key is automatically downloaded to your machine. 
+
+Move the `private.key` file to the root directory of this repository.
 
 Ensure you are at the repository root and execute the following command in your terminal:
 
