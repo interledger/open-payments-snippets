@@ -1,6 +1,6 @@
 # Open Payments Node SDK Snippets
 
-These code snippets are intended for use with <a href="https://rafiki.money" target="_blank">Rafiki Money</a>. While
+These code snippets are intended for use with <a href="https://wallet.interledger-test.dev" target="_blank">Test Wallet</a>. While
 everyone is welcome to use these code snippets as a reference, please note that they may need to be adapted to suit your
 particular application.
 
