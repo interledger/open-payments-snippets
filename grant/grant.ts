@@ -56,11 +56,6 @@ const grant = await client.grant.request(
                             assetCode: "USD",
                             assetScale: 2,
                         },
-                        receiveAmount: {
-                            value: "10000",
-                            assetCode: "USD",
-                            assetScale: 2,
-                        },
                     },
                 },
             ],
