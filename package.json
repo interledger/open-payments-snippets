@@ -14,6 +14,7 @@
         "ip:create": "tsx incoming-payment/incoming-payment-create.ts",
         "ip:complete": "tsx incoming-payment/incoming-payment-complete.ts",
         "ip:get": "tsx incoming-payment/incoming-payment-get.ts",
+        "ip:public-get": "tsx incoming-payment/incoming-payment-get-public.ts",
         "ip:list": "tsx incoming-payment/incoming-payment-list.ts",
         "quote:create": "tsx quote/quote-create.ts",
         "quote:create:ra": "tsx quote/quote-create-receive-amount.ts",
@@ -42,13 +43,14 @@
         "sdk"
     ],
     "devDependencies": {
-        "@types/node": "^20.17.16",
-        "dotenv": "^16.4.7",
-        "prettier": "^3.4.2",
-        "tsx": "^4.19.2",
-        "typescript": "^5.7.3"
+        "@types/node": "^20.19.1",
+        "dotenv": "^16.5.0",
+        "prettier": "^3.6.1",
+        "tsx": "^4.20.3",
+        "typescript": "^5.8.3"
     },
     "dependencies": {
-        "@interledger/open-payments": "^6.13.2"
-    }
+        "@interledger/open-payments": "^7.1.1"
+    },
+    "packageManager": "pnpm@10.0.0+sha512.b8fef5494bd3fe4cbd4edabd0745df2ee5be3e4b0b8b08fa643aa3e4c6702ccc0f00d68fa8a8c9858a735a0032485a44990ed2810526c875e416f001b17df12b"
 }
