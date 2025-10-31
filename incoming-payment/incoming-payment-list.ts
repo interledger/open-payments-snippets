@@ -1,5 +1,5 @@
 import dotenv from "dotenv";
-// import { join } from "path";
+import { join } from "path";
 import { fileURLToPath } from "url";
 
 dotenv.config({

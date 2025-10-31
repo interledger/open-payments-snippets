@@ -42,10 +42,6 @@ const quote = await client.quote.create(
         receiver: INCOMING_PAYMENT_URL,
     },
 );
-//@! end chunk 3
-
-//@! start chunk 4 | title=Output
-console.log("QUOTE_URL =", quote.id);
 //@! end chunk 4
 
 //@! start chunk 5 | title=Output
