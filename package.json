@@ -44,7 +44,7 @@
     ],
     "devDependencies": {
         "@types/node": "^20.19.1",
-        "dotenv": "^16.5.0",
+        "dotenv": "^17.2.4",
         "prettier": "^3.6.1",
         "tsx": "^4.20.3",
         "typescript": "^5.8.3"
