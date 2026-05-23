@@ -47,7 +47,7 @@
         "dotenv": "^16.5.0",
         "prettier": "^3.6.1",
         "tsx": "^4.20.3",
-        "typescript": "^5.8.3"
+        "typescript": "^5.9.3"
     },
     "dependencies": {
         "@interledger/open-payments": "^7.1.1"
